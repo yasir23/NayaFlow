@@ -1,10 +1,9 @@
+import React from 'react';
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import AgentFlowchart from "../../components/AgentFlowchart";
 import OrchestratorPatterns from "../../components/OrchestratorPatterns";
-import EnterpriseUseCases from "../../components/EnterpriseUseCases";
-import Button from '../../components/ui/button';
+import EnterpriseUseCases from '@/components/EnterpriseUseCases';
 
 export const metadata: Metadata = {
   title: "AI Agent Orchestration Solutions | NAYAFlOW",

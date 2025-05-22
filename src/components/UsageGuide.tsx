@@ -2,16 +2,10 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 
 // Dynamically import SyntaxHighlighter to prevent SSR issues
 const SyntaxHighlighter = dynamic(
   () => import('react-syntax-highlighter').then((mod) => mod.Prism),
-  { ssr: false }
-);
-
-const tomorrow = dynamic<any>(
-  () => import('react-syntax-highlighter/dist/esm/styles/prism').then((mod) => mod.tomorrow),
   { ssr: false }
 );
 
@@ -21,6 +15,18 @@ type PlatformId = 'langchain' | 'crewai' | 'autogen';
 const UsageGuide = () => {
   const [activeTab, setActiveTab] = useState<TabId>('quickstart');
   const [activePlatform, setActivePlatform] = useState<PlatformId>('langchain');
+  const [codeStyle, setCodeStyle] = useState<Record<string, React.CSSProperties>>({});
+
+  // Load the style when component mounts
+  React.useEffect(() => {
+    import('react-syntax-highlighter/dist/esm/styles/prism')
+      .then((styles) => {
+        setCodeStyle(styles.tomorrow);
+      })
+      .catch((error) => {
+        console.error('Failed to load syntax highlighting style:', error);
+      });
+  }, []);
 
   const platformTabs = [
     { id: 'langchain', label: 'LangChain' },
@@ -862,7 +868,7 @@ print(results)`
           {typeof SyntaxHighlighter !== 'string' && (
             <SyntaxHighlighter 
               language={activePlatform === 'autogen' ? 'python' : 'javascript'} 
-              style={tomorrow || {}} // Provide a fallback empty style
+              style={codeStyle} 
               customStyle={{
                 borderRadius: '0.5rem',
                 fontSize: '0.9rem',

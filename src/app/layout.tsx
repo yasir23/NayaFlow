@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/images/logo/nayaflow-logo.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' }
+      { url: '/favicon.ico', sizes: '48x48' }
     ],
     apple: { url: '/images/logo/nayaflow-logo.svg', type: 'image/svg+xml' },
   },

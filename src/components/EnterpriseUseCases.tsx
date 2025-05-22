@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from './ui/card';
-import { Tab, Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 
 const EnterpriseUseCases = () => {
   return (
