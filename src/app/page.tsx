@@ -1,103 +1,168 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Metadata } from "next";
+import Button from "../components/ui/button";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import CaseStudies from "../components/CaseStudies";
+import Pricing from "../components/Pricing";
+import FAQ from "../components/FAQ";
+import ContactForm from "../components/ContactForm";
+import CTA from "../components/CTA";
+
+export const metadata: Metadata = {
+  title: "NAYAFlOW | AI Agent Orchestration Platform",
+  description: "The enterprise platform for orchestrating AI agents across your organization",
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex min-h-screen flex-col items-center justify-between w-full">
+      {/* Hero Section */}
+      <Hero />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      {/* Features Section */}
+      <Features />
+
+      {/* How It Works */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <div className="container px-4 md:px-6 mx-auto w-full">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-8 text-blue-700">
+              How NAYAFlOW Works
+            </h2>
+            <p className="max-w-[800px] text-gray-500 md:text-xl mb-12">
+              NAYAFlOW provides a scalable, enterprise-ready platform for orchestrating AI agents across your organization.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6 relative w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                <span className="text-blue-600 text-3xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-blue-700">Define Your Agents</h3>
+              <p className="text-gray-600">
+                Create specialized AI agents with specific roles, capabilities, and access to tools and data sources.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6 relative w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                <span className="text-blue-600 text-3xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-blue-700">Design Workflows</h3>
+              <p className="text-gray-600">
+                Use our visual workflow designer to create complex agent interactions and decision paths.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-6 relative w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                <span className="text-blue-600 text-3xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-blue-700">Deploy & Monitor</h3>
+              <p className="text-gray-600">
+                Launch your orchestrated agents into production with comprehensive monitoring and governance.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-16 relative rounded-xl overflow-hidden border border-gray-200">
+            <Image 
+              src="/images/documentation/platform-workflow.svg" 
+              alt="NAYAFlOW workflow diagram"
+              width={1200}
+              height={600}
+              className="w-full"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Framework Integration */}
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+        <div className="container px-4 md:px-6 mx-auto w-full">
+          <div className="flex flex-col items-center text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-8 text-blue-700">
+              Framework Integration
+            </h2>
+            <p className="max-w-[800px] text-gray-500 md:text-xl">
+              NAYAFlOW seamlessly integrates with popular AI agent frameworks to provide a unified orchestration layer.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                  <span className="text-green-700 text-xl font-bold">LG</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-blue-700">LangGraph</h3>
+                  <p className="text-gray-600">State management, cyclic execution</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Full integration with LangChain's LangGraph framework for complex multi-agent systems with state management.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                  <span className="text-red-700 text-xl font-bold">CA</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-blue-700">CrewAI</h3>
+                  <p className="text-gray-600">Role-based collaboration</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Seamless integration with CrewAI for role-based agent collaboration and task delegation systems.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <span className="text-blue-700 text-xl font-bold">AG</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-blue-700">AutoGen</h3>
+                  <p className="text-gray-600">Conversational agents</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">
+                Full support for Microsoft's AutoGen framework for flexible multi-agent conversation systems.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link href="/solutions">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                Explore Framework Integrations
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <CaseStudies />
+
+      {/* Pricing Section */}
+      <Pricing />
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      {/* Contact Form */}
+      <ContactForm />
+
+      {/* CTA Section */}
+      <CTA />
+    </main>
   );
 }
