@@ -21,7 +21,7 @@ const Hero = () => {
               Unlock unprecedented efficiency with our AI agent orchestration platform, tailored for enterprise-scale automation.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium text-center transition-colors text-lg">
+              <Link href="https://cal.com/yasirali23/intro-call-45-min" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium text-center transition-colors text-lg">
                 Book a Demo
               </Link>
               <Link href="/solutions" className="px-8 py-3 bg-transparent border-2 border-blue-600 hover:bg-blue-100 text-blue-700 rounded-full font-medium text-center transition-colors text-lg">

@@ -50,7 +50,7 @@ const Navbar = () => {
         </div>
         
         <button className="hidden md:block px-5 py-2 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors">
-          <Link href="/contact">Contact Us</Link>
+          <Link href="https://cal.com/yasirali23/intro-call-45-min">Book a Demo</Link>
         </button>
         
         <button 
@@ -83,8 +83,8 @@ const Navbar = () => {
             <Link href="/faq" className="text-gray-700 hover:text-blue-700 transition-colors">
               FAQs
             </Link>
-            <Link href="/contact" className="px-5 py-2 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors text-center">
-              Contact Us
+            <Link href="https://cal.com/yasirali23/intro-call-45-min" className="px-5 py-2 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors text-center">
+              Book a Meeting
             </Link>
           </div>
         </div>

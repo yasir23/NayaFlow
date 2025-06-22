@@ -133,7 +133,7 @@ const Pricing = () => {
             We offer tailored enterprise solutions for organizations with specific requirements. Our team will work with you to design a custom plan.
           </p>
           <Link 
-            href="/contact" 
+            href="https://cal.com/yasirali23/intro-call-45-min" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors"
           >
             Schedule a Consultation

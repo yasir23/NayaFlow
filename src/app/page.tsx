@@ -70,7 +70,7 @@ export default function Home() {
           
           <div className="mt-16 relative rounded-xl overflow-hidden border border-gray-200">
             <Image 
-              src="/images/documentation/platform-workflow.svg" 
+              src="/images/documentation/platform-workflow.jpeg" 
               alt="NAYAFlOW workflow diagram"
               width={1200}
               height={600}

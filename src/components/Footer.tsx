@@ -95,11 +95,11 @@ const Footer = () => {
                 123 AI Avenue, Innovation District
               </li>
               <li className="text-gray-600">
-                San Francisco, CA 94103
+                Montana, CA 94103
               </li>
               <li>
                 <a href="mailto:info@nayaflow.com" className="text-gray-600 hover:text-blue-700 transition-colors">
-                  info@nayaflow.com
+                  yasir@nayaflow.com
                 </a>
               </li>
               <li>

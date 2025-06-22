@@ -135,7 +135,7 @@ export default function Solutions() {
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
               <Image 
-                src="/images/documentation/system-architecture.svg" 
+                src="/images/documentation/system-architecture.jpeg" 
                 alt="NAYAFlOW AI Agent Architecture" 
                 width={500} 
                 height={400}
@@ -158,7 +158,7 @@ export default function Solutions() {
           
           <div className="flex justify-center mb-12">
             <Image 
-              src="/images/documentation/framework-comparison.svg" 
+              src="/images/documentation/framework-comparison.jpeg" 
               alt="NAYAFlOW Framework Comparison" 
               width={800} 
               height={600}
@@ -221,7 +221,7 @@ export default function Solutions() {
           
           <div className="flex justify-center mb-12">
             <Image 
-              src="/images/documentation/orchestration-patterns.svg" 
+              src="/images/documentation/orchestration-patterns.jpeg" 
               alt="NAYAFlOW Orchestration Patterns" 
               width={800} 
               height={600}

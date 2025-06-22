@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "default" | "outline" | "ghost";
@@ -47,6 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button className={buttonClasses} {...props}>
       {children}
+      
     </button>
   );
 };

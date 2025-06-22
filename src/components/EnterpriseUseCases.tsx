@@ -21,7 +21,7 @@ const EnterpriseUseCases = () => {
         </div>
         <div className="w-full md:w-1/2">
           <Image 
-            src="/images/documentation/enterprise-use-cases.svg" 
+            src="/images/documentation/enterprise-use-cases.jpeg" 
             alt="Enterprise Use Cases for AI Agent Orchestration" 
             width={600}
             height={450}

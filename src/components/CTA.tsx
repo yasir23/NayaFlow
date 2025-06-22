@@ -44,7 +44,7 @@ const CTA = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Link 
-              href="/contact" 
+              href="https://cal.com/yasirali23/intro-call-45-min" 
               className="px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-colors"
             >
               Schedule a Demo

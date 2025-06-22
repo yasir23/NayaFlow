@@ -82,7 +82,7 @@ export default function Architecture() {
             </div>
             <div className="relative rounded-xl overflow-hidden border border-gray-200">
               <Image 
-                src="/images/documentation/system-architecture.svg" 
+                src="/images/architecture/autogen-implimentation.jpeg" 
                 alt="NAYAFlOW platform architecture diagram"
                 width={600}
                 height={400}
