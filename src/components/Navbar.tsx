@@ -16,12 +16,12 @@ const Navbar = () => {
     <nav className="w-full py-4 bg-gradient-to-r from-white via-blue-50 to-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="relative w-8 h-8">
+          <div className="relative w-20 h-20">
             <Image 
-              src="/images/logo/nayaflow-logo.svg" 
+              src="/images/logo/nayaflow-logo1.png"
               alt="NAYAFlOW Logo" 
-              width={32} 
-              height={32}
+              width={100} 
+              height={100}
               className="object-contain"
             />
           </div>
