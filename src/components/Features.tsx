@@ -34,6 +34,21 @@ const Features = () => {
       icon: <FaUsersCog size={36} className="text-blue-500" />,
       title: "Human-AI Collaboration",
       description: "Empower your workforce with AI agents that enhance human capabilities rather than replace them, creating effective hybrid teams."
+    },
+    {
+      icon: <FaHandshake size={36} className="text-green-500" />,
+      title: "Sales Automation",
+      description: "Automate your entire sales pipeline from lead generation to conversion with AI-powered qualification, nurturing, and closing processes."
+    },
+    {
+      icon: <FaCogs size={36} className="text-orange-500" />,
+      title: "No-Code Integrations",
+      description: "Connect with 1000+ applications using visual workflow builders like n8n and Make.com - no technical expertise required."
+    },
+    {
+      icon: <FaBuilding size={36} className="text-purple-500" />,
+      title: "Multi-Segment Support",
+      description: "Tailored solutions for every business size - from rapid startup deployment to enterprise-grade orchestration with advanced governance."
     }
   ];
 
@@ -83,3 +98,4 @@ const Features = () => {
 };
 
 export default Features; 
+
