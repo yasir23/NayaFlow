@@ -1,9 +1,24 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaRocket, FaChartLine, FaBuilding, FaBrain, FaGoogle, FaRobot, FaCogs, FaPlug } from 'react-icons/fa';
+import { 
+  FaBrain, 
+  FaRobot, 
+  FaMobile, 
+  FaUsers, 
+  FaCloud, 
+  FaPalette, 
+  FaCode, 
+  FaCogs, 
+  FaShieldAlt, 
+  FaChartBar, 
+  FaDatabase, 
+  FaGamepad,
+  FaPlus,
+  FaMinus
+} from 'react-icons/fa';
 
 const Services = () => {
   const businessSegments = [
@@ -343,3 +358,4 @@ const Services = () => {
 };
 
 export default Services;
+
