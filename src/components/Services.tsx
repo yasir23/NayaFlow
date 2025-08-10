@@ -136,75 +136,6 @@ const Services = () => {
 
   const displayedServices = showAllServices ? services : services.slice(0, 8);
 
-  const serviceIntegrations = [
-    {
-      name: 'Sales Automation',
-      icon: <FaChartLine size={24} className="text-blue-600" />,
-      description: 'Intelligent lead qualification, follow-ups, and customer lifecycle management across all business segments.',
-      capabilities: ['Lead scoring & routing', 'Email sequences', 'CRM integration', 'Revenue forecasting'],
-      segments: {
-        startups: 'Basic lead management and email automation',
-        smes: 'Multi-channel campaigns with predictive analytics',
-        enterprises: 'Global territory management with compliance'
-      }
-    },
-    {
-      name: 'LangGraph',
-      icon: <FaBrain size={24} className="text-purple-600" />,
-      description: 'Advanced multi-agent orchestration with state management for complex business workflows.',
-      capabilities: ['Multi-agent coordination', 'State management', 'Complex workflows', 'Custom logic'],
-      segments: {
-        startups: 'Simple agent workflows for core processes',
-        smes: 'Advanced orchestration for growing complexity',
-        enterprises: 'Unlimited agents with custom security'
-      }
-    },
-    {
-      name: 'Google SDK',
-      icon: <FaGoogle size={24} className="text-red-600" />,
-      description: 'Seamless integration with Google Workspace and Cloud services for enhanced productivity.',
-      capabilities: ['Gmail automation', 'Sheets integration', 'Calendar management', 'Drive workflows'],
-      segments: {
-        startups: 'Basic Google Workspace automation',
-        smes: 'Advanced Google services integration',
-        enterprises: 'Full Google Cloud enterprise features'
-      }
-    },
-    {
-      name: 'OpenAI SDK',
-      icon: <FaRobot size={24} className="text-green-600" />,
-      description: 'Leverage cutting-edge AI models for content generation, analysis, and intelligent automation.',
-      capabilities: ['Content generation', 'Data analysis', 'Chatbot automation', 'Custom AI models'],
-      segments: {
-        startups: 'Essential AI features for growth',
-        smes: 'Advanced AI with custom training',
-        enterprises: 'Dedicated infrastructure and compliance'
-      }
-    },
-    {
-      name: 'n8n',
-      icon: <FaCogs size={24} className="text-orange-600" />,
-      description: 'Visual workflow automation platform connecting 200+ applications without coding expertise.',
-      capabilities: ['No-code automation', '200+ integrations', 'Custom workflows', 'Visual builder'],
-      segments: {
-        startups: 'Essential no-code workflows',
-        smes: 'Self-hosted with advanced security',
-        enterprises: 'On-premises with custom nodes'
-      }
-    },
-    {
-      name: 'Make.com',
-      icon: <FaPlug size={24} className="text-indigo-600" />,
-      description: 'Powerful automation platform for complex multi-step workflows across hundreds of applications.',
-      capabilities: ['Visual workflow builder', '1000+ app integrations', 'Advanced logic', 'Error handling'],
-      segments: {
-        startups: 'Basic automation scenarios',
-        smes: 'Advanced workflows with complex logic',
-        enterprises: 'Private cloud with unlimited scenarios'
-      }
-    }
-  ];
-
   return (
     <section className="w-full py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 md:px-6 w-full">
@@ -422,5 +353,6 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
