@@ -63,7 +63,7 @@ const Features = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Revolutionize Your Enterprise with AI Orchestration
+            AI Automation for Every Business Size
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -72,7 +72,7 @@ const Features = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            NAYAFlOW orchestrates millions of specialized AI agents to automate complex business processes at unprecedented scale and efficiency.
+            From startup sales automation to enterprise orchestration - NAYAFlOW delivers tailored AI solutions that scale with your business growth.
           </motion.p>
         </div>
 
@@ -98,4 +98,5 @@ const Features = () => {
 };
 
 export default Features; 
+
 
