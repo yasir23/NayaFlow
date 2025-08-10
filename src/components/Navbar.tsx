@@ -90,30 +90,30 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white w-full absolute left-0 right-0 z-10 shadow-md">
+        <div className="md:hidden bg-white dark:bg-slate-900 w-full absolute left-0 right-0 z-10 shadow-md border-t border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link href="/" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/solutions" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/solutions" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               Solutions
             </Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               Services
             </Link>
-            <Link href="/architecture" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/architecture" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               Architecture
             </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               Case Studies
             </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/pricing" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               Pricing
             </Link>
-            <Link href="/faq" className="text-gray-700 hover:text-blue-700 transition-colors">
+            <Link href="/faq" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
               FAQs
             </Link>
-            <Link href="https://cal.com/yasirali23/intro-call-45-min" className="px-5 py-2 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors text-center">
+            <Link href="https://cal.com/yasirali23/intro-call-45-min" className="px-5 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-full font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors text-center">
               Book a Meeting
             </Link>
           </div>
@@ -124,6 +124,7 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
 
