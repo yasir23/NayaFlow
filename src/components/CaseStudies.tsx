@@ -1,48 +1,141 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { 
+  FaCalendarAlt, 
+  FaClock, 
+  FaArrowRight, 
+  FaExternalLinkAlt,
+  FaChartLine,
+  FaLightbulb,
+  FaCode,
+  FaMobile,
+  FaCloud,
+  FaShieldAlt
+} from 'react-icons/fa';
 
 const CaseStudies = () => {
-  const caseStudies = [
+  const [activeTab, setActiveTab] = useState<'all' | 'case-studies' | 'insights'>('all');
+
+  const featuredContent = [
     {
-      company: "TechCorp Global",
-      logo: "/logos/techcorp.svg", // This would be placeholder in a real implementation
-      industry: "Financial Services",
-      result: "$3.2M in operational savings",
-      description: "Implemented 500,000+ AI agents to automate customer service, fraud detection, and regulatory compliance processes.",
-      metrics: [
-        { label: "Efficiency Increase", value: "78%" },
-        { label: "Response Time", value: "-92%" },
-        { label: "Customer Satisfaction", value: "+42%" }
-      ]
+      id: 'techcorp-transformation',
+      type: 'case-study',
+      title: 'TechCorp Global: $3.2M Operational Savings Through AI Automation',
+      excerpt: 'How we implemented 500,000+ AI agents to revolutionize customer service, fraud detection, and regulatory compliance processes.',
+      industry: 'Financial Services',
+      readTime: '8 min read',
+      date: '2024-01-15',
+      image: '/images/case-studies/techcorp-hero.jpg',
+      tags: ['AI Automation', 'Financial Services', 'Cost Reduction'],
+      metrics: {
+        primary: '$3.2M saved annually',
+        secondary: ['78% efficiency increase', '92% faster response', '42% higher satisfaction']
+      },
+      href: '/case-studies/techcorp-global-transformation'
     },
     {
-      company: "InnoHealth",
-      logo: "/logos/innohealth.svg", // This would be placeholder in a real implementation
-      industry: "Healthcare",
-      result: "4,500 hours saved monthly",
-      description: "Deployed a network of specialized medical AI agents for patient intake, diagnostic assistance, and administrative tasks.",
-      metrics: [
-        { label: "Documentation Time", value: "-65%" },
-        { label: "Diagnostic Accuracy", value: "+28%" },
-        { label: "Staff Productivity", value: "+52%" }
-      ]
+      id: 'ai-trends-2024',
+      type: 'insight',
+      title: 'The Future of AI in Enterprise: 5 Trends Shaping 2024',
+      excerpt: 'Explore the latest developments in artificial intelligence and how they\'re transforming business operations across industries.',
+      category: 'AI Trends',
+      readTime: '6 min read',
+      date: '2024-01-20',
+      image: '/images/insights/ai-trends-2024.jpg',
+      tags: ['AI Trends', 'Enterprise', 'Technology'],
+      author: {
+        name: 'Dr. Sarah Chen',
+        title: 'Head of AI Research',
+        avatar: '/images/team/sarah-chen.jpg'
+      },
+      href: '/insights/ai-trends-2024'
     },
     {
-      company: "LogiSupply Inc.",
-      logo: "/logos/logisupply.svg", // This would be placeholder in a real implementation
-      industry: "Supply Chain",
-      result: "99.8% inventory accuracy",
-      description: "Built an orchestrated system of AI agents to optimize inventory management, demand forecasting, and logistics operations.",
-      metrics: [
-        { label: "Stockouts", value: "-87%" },
-        { label: "Shipping Errors", value: "-94%" },
-        { label: "Fulfillment Speed", value: "+63%" }
-      ]
+      id: 'healthcare-ai-success',
+      type: 'case-study',
+      title: 'InnoHealth: 4,500 Hours Saved Monthly with Medical AI Agents',
+      excerpt: 'Discover how specialized medical AI agents transformed patient intake, diagnostic assistance, and administrative workflows.',
+      industry: 'Healthcare',
+      readTime: '10 min read',
+      date: '2024-01-10',
+      image: '/images/case-studies/innohealth-success.jpg',
+      tags: ['Healthcare AI', 'Process Automation', 'Efficiency'],
+      metrics: {
+        primary: '4,500 hours saved monthly',
+        secondary: ['65% less documentation time', '28% diagnostic accuracy', '52% staff productivity']
+      },
+      href: '/case-studies/innohealth-medical-ai'
+    },
+    {
+      id: 'mobile-development-guide',
+      type: 'insight',
+      title: 'Building Scalable Mobile Apps: A Complete Development Guide',
+      excerpt: 'Best practices and strategies for creating mobile applications that scale with your business growth.',
+      category: 'Mobile Development',
+      readTime: '12 min read',
+      date: '2024-01-18',
+      image: '/images/insights/mobile-development-guide.jpg',
+      tags: ['Mobile Development', 'Scalability', 'Best Practices'],
+      author: {
+        name: 'Michael Rodriguez',
+        title: 'Senior Mobile Architect',
+        avatar: '/images/team/michael-rodriguez.jpg'
+      },
+      href: '/insights/mobile-development-guide'
+    },
+    {
+      id: 'supply-chain-optimization',
+      type: 'case-study',
+      title: 'LogiSupply Inc: Achieving 99.8% Inventory Accuracy with AI',
+      excerpt: 'Learn how orchestrated AI agents optimized inventory management, demand forecasting, and logistics operations.',
+      industry: 'Supply Chain',
+      readTime: '9 min read',
+      date: '2024-01-05',
+      image: '/images/case-studies/logisupply-optimization.jpg',
+      tags: ['Supply Chain', 'AI Optimization', 'Logistics'],
+      metrics: {
+        primary: '99.8% inventory accuracy',
+        secondary: ['87% fewer stockouts', '94% less shipping errors', '63% faster fulfillment']
+      },
+      href: '/case-studies/logisupply-inventory-optimization'
+    },
+    {
+      id: 'cybersecurity-insights',
+      type: 'insight',
+      title: 'Cybersecurity in the Age of AI: Protecting Your Digital Assets',
+      excerpt: 'Essential cybersecurity strategies and AI-powered solutions to safeguard your business in an evolving threat landscape.',
+      category: 'Cybersecurity',
+      readTime: '7 min read',
+      date: '2024-01-22',
+      image: '/images/insights/cybersecurity-ai.jpg',
+      tags: ['Cybersecurity', 'AI Security', 'Digital Protection'],
+      author: {
+        name: 'Alex Thompson',
+        title: 'Cybersecurity Lead',
+        avatar: '/images/team/alex-thompson.jpg'
+      },
+      href: '/insights/cybersecurity-ai-protection'
     }
   ];
+
+  const filteredContent = featuredContent.filter(item => {
+    if (activeTab === 'all') return true;
+    if (activeTab === 'case-studies') return item.type === 'case-study';
+    if (activeTab === 'insights') return item.type === 'insight';
+    return true;
+  });
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI Trends': return <FaLightbulb className="w-4 h-4" />;
+      case 'Mobile Development': return <FaMobile className="w-4 h-4" />;
+      case 'Cybersecurity': return <FaShieldAlt className="w-4 h-4" />;
+      default: return <FaChartLine className="w-4 h-4" />;
+    }
+  };
 
   return (
     <section className="w-full py-20 bg-white">
