@@ -22,7 +22,7 @@ const CTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Ready to Orchestrate Millions of AI Agents for Your Enterprise?
+            Ready to Transform Your Business with AI Automation?
           </motion.h2>
           
           <motion.p 
@@ -32,8 +32,7 @@ const CTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Join the enterprises already saving millions through intelligent automation. 
-            Our team will create a tailored solution for your unique business needs.
+            Whether you're a startup looking for rapid deployment, an SME scaling operations, or an enterprise needing comprehensive orchestration - we have tailored AI automation services that deliver results from day one.
           </motion.p>
           
           <motion.div
@@ -50,10 +49,16 @@ const CTA = () => {
               Schedule a Demo
             </Link>
             <Link 
+              href="/services" 
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full font-bold text-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Explore Our Services
+            </Link>
+            <Link 
               href="/case-studies" 
               className="px-8 py-4 bg-transparent border-2 border-blue-600 text-blue-700 rounded-full font-bold text-lg hover:bg-blue-100 transition-colors"
             >
-              Explore Case Studies
+              View Case Studies
             </Link>
           </motion.div>
         </div>
@@ -63,3 +68,4 @@ const CTA = () => {
 };
 
 export default CTA; 
+

@@ -35,6 +35,9 @@ const Navbar = () => {
           <Link href="/solutions" className="text-gray-700 hover:text-blue-700 transition-colors">
             Solutions
           </Link>
+          <Link href="/services" className="text-gray-700 hover:text-blue-700 transition-colors">
+            Services
+          </Link>
           <Link href="/architecture" className="text-gray-700 hover:text-blue-700 transition-colors">
             Architecture
           </Link>
@@ -71,6 +74,9 @@ const Navbar = () => {
             <Link href="/solutions" className="text-gray-700 hover:text-blue-700 transition-colors">
               Solutions
             </Link>
+            <Link href="/services" className="text-gray-700 hover:text-blue-700 transition-colors">
+              Services
+            </Link>
             <Link href="/architecture" className="text-gray-700 hover:text-blue-700 transition-colors">
               Architecture
             </Link>
@@ -94,3 +100,4 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
