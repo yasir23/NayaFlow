@@ -137,27 +137,27 @@ const Services = () => {
   const displayedServices = showAllServices ? services : services.slice(0, 8);
 
   return (
-    <section className="w-full py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="w-full py-16 md:py-24 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4 md:px-6 w-full">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-4 text-blue-700"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            AI Automation Services for Every Business
+            Transform Your Business
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            From startups to enterprises, we deliver tailored automation solutions with powerful integrations that scale with your business.
+            Comprehensive AI and technology solutions designed to accelerate your digital transformation and drive business growth.
           </motion.p>
         </div>
 
@@ -353,6 +353,7 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
 
