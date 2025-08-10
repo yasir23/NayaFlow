@@ -150,6 +150,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <Services />
+
       {/* Case Studies Section */}
       <CaseStudies />
 
@@ -167,4 +170,5 @@ export default function Home() {
     </main>
   );
 }
+
 
