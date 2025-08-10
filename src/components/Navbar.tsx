@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes, FaMoon, FaSun, FaChevronDown } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar = () => {
@@ -124,6 +124,7 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
 
