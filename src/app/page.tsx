@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Button from "../components/ui/button";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
+import Services from "../components/Services";
 import CaseStudies from "../components/CaseStudies";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
@@ -166,3 +167,4 @@ export default function Home() {
     </main>
   );
 }
+
