@@ -21,56 +21,120 @@ import {
 } from 'react-icons/fa';
 
 const Services = () => {
-  const businessSegments = [
+  const [showAllServices, setShowAllServices] = useState(false);
+
+  const services = [
     {
-      id: 'startups',
-      title: 'Startups',
-      icon: <FaRocket size={32} className="text-green-600" />,
-      description: 'Rapid deployment and cost-effective automation solutions to accelerate growth from day one.',
-      color: 'green',
-      bgGradient: 'from-green-50 to-emerald-100',
-      borderColor: 'border-green-200',
-      textColor: 'text-green-800',
-      features: [
-        'Quick 2-4 week setup',
-        'Affordable pricing',
-        'Essential integrations',
-        'Growth-ready architecture'
-      ]
+      id: 'generative-ai',
+      title: 'Generative AI',
+      icon: <FaBrain className="w-8 h-8" />,
+      description: 'Harness the power of AI to generate content, automate processes, and enhance decision-making across your organization.',
+      features: ['Content Generation', 'Process Automation', 'Intelligent Analysis', 'Custom AI Models'],
+      color: 'from-purple-500 to-pink-500',
+      href: '/services/generative-ai'
     },
     {
-      id: 'smes',
-      title: 'SMEs',
-      icon: <FaChartLine size={32} className="text-blue-600" />,
-      description: 'Scalable solutions for growing businesses that need flexibility and advanced automation capabilities.',
-      color: 'blue',
-      bgGradient: 'from-blue-50 to-indigo-100',
-      borderColor: 'border-blue-200',
-      textColor: 'text-blue-800',
-      features: [
-        'Advanced workflow automation',
-        'Multi-department integration',
-        'Scalable infrastructure',
-        'Performance analytics'
-      ]
+      id: 'ai-agents',
+      title: 'AI Agent Development',
+      icon: <FaRobot className="w-8 h-8" />,
+      description: 'Custom AI agents tailored to your business needs, capable of handling complex workflows and decision-making.',
+      features: ['Custom Agent Design', 'Workflow Integration', 'Multi-Agent Systems', 'Performance Monitoring'],
+      color: 'from-blue-500 to-cyan-500',
+      href: '/services/ai-agents'
     },
     {
-      id: 'enterprises',
-      title: 'Enterprises',
-      icon: <FaBuilding size={32} className="text-purple-600" />,
-      description: 'Comprehensive orchestration with advanced security, compliance, and unlimited customization.',
-      color: 'purple',
-      bgGradient: 'from-purple-50 to-violet-100',
-      borderColor: 'border-purple-200',
-      textColor: 'text-purple-800',
-      features: [
-        'Enterprise-grade security',
-        'Custom compliance features',
-        'Unlimited orchestration',
-        '24/7 dedicated support'
-      ]
+      id: 'mobile-development',
+      title: 'Mobile App Development',
+      icon: <FaMobile className="w-8 h-8" />,
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
+      features: ['iOS & Android', 'Cross-Platform', 'UI/UX Design', 'App Store Optimization'],
+      color: 'from-green-500 to-emerald-500',
+      href: '/services/mobile-development'
+    },
+    {
+      id: 'staff-augmentation',
+      title: 'Staff Augmentation',
+      icon: <FaUsers className="w-8 h-8" />,
+      description: 'Scale your team with skilled professionals who integrate seamlessly with your existing workforce.',
+      features: ['Skilled Professionals', 'Quick Integration', 'Flexible Scaling', 'Quality Assurance'],
+      color: 'from-orange-500 to-red-500',
+      href: '/services/staff-augmentation'
+    },
+    {
+      id: 'cloud-services',
+      title: 'Cloud Solutions',
+      icon: <FaCloud className="w-8 h-8" />,
+      description: 'Comprehensive cloud services including migration, optimization, and management for scalable infrastructure.',
+      features: ['Cloud Migration', 'Infrastructure Management', 'Cost Optimization', '24/7 Support'],
+      color: 'from-indigo-500 to-purple-500',
+      href: '/services/cloud-solutions'
+    },
+    {
+      id: 'ui-ux-design',
+      title: 'UI/UX Design',
+      icon: <FaPalette className="w-8 h-8" />,
+      description: 'User-centered design solutions that create intuitive and engaging digital experiences.',
+      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
+      color: 'from-pink-500 to-rose-500',
+      href: '/services/ui-ux-design'
+    },
+    {
+      id: 'web-development',
+      title: 'Web Development',
+      icon: <FaCode className="w-8 h-8" />,
+      description: 'Full-stack web applications built with modern technologies for optimal performance and scalability.',
+      features: ['Full-Stack Development', 'Modern Frameworks', 'Responsive Design', 'Performance Optimization'],
+      color: 'from-teal-500 to-green-500',
+      href: '/services/web-development'
+    },
+    {
+      id: 'custom-software',
+      title: 'Custom Software Development',
+      icon: <FaCogs className="w-8 h-8" />,
+      description: 'Bespoke software solutions designed to meet your unique business requirements and challenges.',
+      features: ['Custom Solutions', 'Scalable Architecture', 'Integration Services', 'Maintenance & Support'],
+      color: 'from-yellow-500 to-orange-500',
+      href: '/services/custom-software'
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity Solutions',
+      icon: <FaShieldAlt className="w-8 h-8" />,
+      description: 'Comprehensive security services to protect your digital assets and ensure compliance.',
+      features: ['Security Assessment', 'Threat Detection', 'Compliance Management', 'Incident Response'],
+      color: 'from-red-500 to-pink-500',
+      href: '/services/cybersecurity'
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics & Insights',
+      icon: <FaChartBar className="w-8 h-8" />,
+      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
+      features: ['Data Visualization', 'Predictive Analytics', 'Business Intelligence', 'Real-time Reporting'],
+      color: 'from-cyan-500 to-blue-500',
+      href: '/services/data-analytics'
+    },
+    {
+      id: 'database-management',
+      title: 'Database Solutions',
+      icon: <FaDatabase className="w-8 h-8" />,
+      description: 'Robust database design, optimization, and management services for reliable data storage.',
+      features: ['Database Design', 'Performance Tuning', 'Data Migration', 'Backup & Recovery'],
+      color: 'from-slate-500 to-gray-500',
+      href: '/services/database-solutions'
+    },
+    {
+      id: 'game-development',
+      title: 'Game Development',
+      icon: <FaGamepad className="w-8 h-8" />,
+      description: 'End-to-end game development services from concept to deployment across multiple platforms.',
+      features: ['Game Design', 'Multi-Platform', '3D Graphics', 'Monetization Strategy'],
+      color: 'from-violet-500 to-purple-500',
+      href: '/services/game-development'
     }
   ];
+
+  const displayedServices = showAllServices ? services : services.slice(0, 8);
 
   const serviceIntegrations = [
     {
@@ -358,4 +422,5 @@ const Services = () => {
 };
 
 export default Services;
+
 
