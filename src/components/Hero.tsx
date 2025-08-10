@@ -15,11 +15,24 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              We Orchestrate <span className="text-blue-700">Millions of AI Agents</span> for Enterprise Automation
+              AI Automation Services for <span className="text-blue-700">Startups, SMEs & Enterprises</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-700 max-w-xl">
-              Unlock unprecedented efficiency with our AI agent orchestration platform, tailored for enterprise-scale automation.
+            <p className="text-xl md:text-2xl mb-6 text-gray-700 max-w-xl">
+              From rapid startup deployment to enterprise-scale orchestration, we deliver tailored AI automation solutions that grow with your business.
             </p>
+            
+            {/* Business Segment Highlights */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+                🚀 Startups: 2-4 week setup
+              </div>
+              <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+                📈 SMEs: Scalable growth
+              </div>
+              <div className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
+                🏢 Enterprise: Unlimited scale
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="https://cal.com/yasirali23/intro-call-45-min" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium text-center transition-colors text-lg">
                 Book a Demo
