@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaBrain, FaRobot, FaChartLine, FaLock, FaPlug, FaUsersCog } from 'react-icons/fa';
+import { FaBrain, FaRobot, FaChartLine, FaLock, FaPlug, FaUsersCog, FaHandshake, FaCogs, FaBuilding } from 'react-icons/fa';
 
 const Features = () => {
   const features = [
