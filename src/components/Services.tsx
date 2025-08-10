@@ -161,48 +161,86 @@ const Services = () => {
           </motion.p>
         </div>
 
-        {/* Business Segments */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {businessSegments.map((segment, index) => (
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          {displayedServices.map((service, index) => (
             <motion.div
-              key={segment.id}
-              className={`bg-gradient-to-br ${segment.bgGradient} rounded-xl p-8 shadow-lg ${segment.borderColor} border hover:shadow-xl transition-shadow`}
+              key={service.id}
+              className="group bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
+              whileHover={{ y: -5 }}
             >
-              <div className="flex items-center mb-6">
-                <div className={`w-16 h-16 bg-${segment.color}-600 rounded-full flex items-center justify-center mr-4`}>
-                  {segment.icon}
+              <Link href={service.href} className="block">
+                {/* Service Icon */}
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">
+                    {service.icon}
+                  </div>
                 </div>
-                <h3 className={`text-2xl font-bold ${segment.textColor}`}>{segment.title}</h3>
-              </div>
-              
-              <p className="text-gray-700 mb-6">{segment.description}</p>
-              
-              <ul className="space-y-2">
-                {segment.features.map((feature, i) => (
-                  <li key={i} className="flex items-center text-sm text-gray-600">
-                    <div className={`w-2 h-2 bg-${segment.color}-500 rounded-full mr-3`}></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="mt-6">
-                <Link 
-                  href="/services" 
-                  className={`inline-flex items-center text-${segment.color}-700 hover:text-${segment.color}-900 font-medium text-sm`}
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                
+                {/* Service Title */}
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
+                
+                {/* Service Description */}
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+                  {service.description}
+                </p>
+                
+                {/* Service Features */}
+                <div className="space-y-1">
+                  {service.features.slice(0, 2).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-xs text-gray-500 dark:text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                  {service.features.length > 2 && (
+                    <div className="flex items-center text-xs text-gray-500 dark:text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                      <span>+{service.features.length - 2} more features</span>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Hover Arrow */}
+                <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-sm font-medium">Learn more</span>
+                  <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
+        </div>
+
+        {/* View More/Less Button */}
+        <div className="text-center">
+          <motion.button
+            onClick={() => setShowAllServices(!showAllServices)}
+            className="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            {showAllServices ? (
+              <>
+                <FaMinus className="w-4 h-4 mr-2" />
+                View Less Services
+              </>
+            ) : (
+              <>
+                <FaPlus className="w-4 h-4 mr-2" />
+                View More Services
+              </>
+            )}
+          </motion.button>
         </div>
 
         {/* Service Integrations */}
@@ -353,6 +391,7 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
 
