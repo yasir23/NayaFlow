@@ -22,7 +22,7 @@ const CTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Ready to Orchestrate Millions of AI Agents for Your Enterprise?
+            Ready to Transform Your Business with AI Automation?
           </motion.h2>
           
           <motion.p 
@@ -32,8 +32,7 @@ const CTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Join the enterprises already saving millions through intelligent automation. 
-            Our team will create a tailored solution for your unique business needs.
+            Whether you're a startup looking for rapid deployment, an SME scaling operations, or an enterprise needing comprehensive orchestration - we have tailored AI automation services that deliver results from day one.
           </motion.p>
           
           <motion.div
