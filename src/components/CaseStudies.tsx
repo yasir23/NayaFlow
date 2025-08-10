@@ -138,27 +138,58 @@ const CaseStudies = () => {
   };
 
   return (
-    <section className="w-full py-20 bg-white">
+    <section className="w-full py-16 md:py-24 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4 md:px-6 w-full">
+        {/* Header */}
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-4 text-blue-700"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Real Results with AI Agent Orchestration
+            Featured Insights
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            See how enterprises across industries are transforming their operations with NAYAFlOW's AI agent orchestration platform.
+            Discover how leading companies are transforming their operations with our AI and technology solutions, 
+            plus expert insights on the latest industry trends.
           </motion.p>
+
+          {/* Tab Navigation */}
+          <motion.div 
+            className="flex justify-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-1 flex">
+              {[
+                { key: 'all', label: 'All Content' },
+                { key: 'case-studies', label: 'Case Studies' },
+                { key: 'insights', label: 'Insights' }
+              ].map((tab) => (
+                <button
+                  key={tab.key}
+                  onClick={() => setActiveTab(tab.key as any)}
+                  className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
+                    activeTab === tab.key
+                      ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -221,3 +252,4 @@ const CaseStudies = () => {
 };
 
 export default CaseStudies; 
+
