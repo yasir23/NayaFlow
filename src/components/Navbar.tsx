@@ -8,6 +8,7 @@ import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -101,5 +102,6 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
