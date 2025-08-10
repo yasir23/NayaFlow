@@ -103,32 +103,47 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 w-full absolute left-0 right-0 z-10 shadow-md border-t border-gray-200 dark:border-gray-700">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              Home
-            </Link>
-            <Link href="/solutions" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              Solutions
-            </Link>
-            <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              Services
-            </Link>
-            <Link href="/architecture" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              Architecture
-            </Link>
-            <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              Case Studies
-            </Link>
-            <Link href="/pricing" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              Pricing
-            </Link>
-            <Link href="/faq" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
-              FAQs
-            </Link>
-            <Link href="https://cal.com/yasirali23/intro-call-45-min" className="px-5 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-full font-medium hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors text-center">
-              Book a Meeting
-            </Link>
+        <div className="lg:hidden bg-white dark:bg-slate-900 w-full absolute left-0 right-0 z-10 shadow-lg border-t border-gray-200 dark:border-gray-700">
+          <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
+            {/* Navigation Links */}
+            <div className="flex flex-col space-y-3 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+                Home
+              </Link>
+              <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+                Services
+              </Link>
+              <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+                Case Studies
+              </Link>
+              <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+                About
+              </Link>
+            </div>
+            
+            {/* Action Buttons */}
+            <div className="flex flex-col space-y-3 pt-2">
+              <Link 
+                href="/services" 
+                className="px-4 py-3 text-center text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium transition-colors border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400"
+              >
+                Explore Services
+              </Link>
+              
+              <Link 
+                href="/contact" 
+                className="px-4 py-3 text-center bg-blue-600 dark:bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm"
+              >
+                Let's Talk Business
+              </Link>
+              
+              <Link 
+                href="/contact" 
+                className="px-4 py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-600 dark:hover:to-purple-600 transition-all shadow-sm"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       )}
@@ -137,6 +152,7 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
 
