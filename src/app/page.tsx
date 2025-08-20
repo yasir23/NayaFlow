@@ -327,6 +327,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <UseCases />
+
       {/* Case Studies Section */}
       <CaseStudies />
 
@@ -344,6 +347,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
