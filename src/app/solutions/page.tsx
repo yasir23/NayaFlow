@@ -225,7 +225,7 @@ export default function Solutions() {
               alt="NAYAFlOW Orchestration Patterns" 
               width={800} 
               height={600}
-              className="rounded-xl shadow-lg bg-white"
+              className="w-full max-w-full rounded-xl shadow-lg bg-white"
             />
           </div>
           
@@ -314,4 +314,5 @@ export default function Solutions() {
     </main>
   );
 } 
+
 
