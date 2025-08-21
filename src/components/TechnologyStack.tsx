@@ -101,7 +101,7 @@ const TechnologyStack = () => {
       { name: 'Kubernetes', icon: <SiKubernetes className="w-8 h-8" />, category: 'DevOps', color: '#326CE5' },
       { name: 'AWS', icon: <FaAws className="w-8 h-8" />, category: 'DevOps', color: '#FF9900' },
       { name: 'Google Cloud', icon: <SiGooglecloud className="w-8 h-8" />, category: 'DevOps', color: '#4285F4' },
-      { name: 'Azure', icon: <SiMicrosoftazure className="w-8 h-8" />, category: 'DevOps', color: '#0078D4' },
+      { name: 'Azure', icon: <FaCloud className="w-8 h-8" />, category: 'DevOps', color: '#0078D4' },
       { name: 'Jenkins', icon: <SiJenkins className="w-8 h-8" />, category: 'DevOps', color: '#D24939' },
       { name: 'Terraform', icon: <SiTerraform className="w-8 h-8" />, category: 'DevOps', color: '#623CE4' },
       { name: 'Nginx', icon: <SiNginx className="w-8 h-8" />, category: 'DevOps', color: '#009639' },
@@ -264,5 +264,6 @@ const TechnologyStack = () => {
 };
 
 export default TechnologyStack;
+
 
 
