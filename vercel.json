@@ -44,12 +44,7 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/api/sitemap"
-    }
-  ],
+
   "redirects": [
     {
       "source": "/home",
@@ -58,4 +53,5 @@
     }
   ]
 }
+
 
