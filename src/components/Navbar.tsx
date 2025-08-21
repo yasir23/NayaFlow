@@ -103,7 +103,7 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-slate-900 w-full absolute left-0 right-0 z-10 shadow-lg border-t border-gray-200 dark:border-gray-700">
+        <div className="lg:hidden bg-white dark:bg-slate-900 w-full fixed left-0 right-0 top-16 z-50 shadow-lg border-t border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             {/* Navigation Links */}
             <div className="flex flex-col space-y-3 pb-4 border-b border-gray-200 dark:border-gray-700">
@@ -152,6 +152,7 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
 
