@@ -139,7 +139,7 @@ export default function Solutions() {
                 alt="NAYAFlOW AI Agent Architecture" 
                 width={500} 
                 height={400}
-                className="rounded-xl shadow-lg"
+                className="w-full max-w-full rounded-xl shadow-lg"
               />
             </div>
           </div>
