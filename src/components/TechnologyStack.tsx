@@ -17,7 +17,8 @@ import {
   FaGitAlt,
   FaJs,
   FaHtml5,
-  FaCss3Alt
+  FaCss3Alt,
+  FaCloud
 } from 'react-icons/fa';
 import { 
   SiTypescript,
@@ -264,3 +265,4 @@ const TechnologyStack = () => {
 };
 
 export default TechnologyStack;
+
