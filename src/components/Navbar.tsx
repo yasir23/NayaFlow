@@ -123,17 +123,17 @@ const Navbar = () => {
             </div>
             
             {/* Action Buttons */}
-            <div className="flex flex-col space-y-3 pt-2">
+            <div className="flex flex-col space-y-4 pt-4">
               <Link 
                 href="/services" 
-                className="px-4 py-3 text-center text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium transition-colors border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400"
+                className="px-6 py-4 min-h-[48px] text-center text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium transition-colors border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 flex items-center justify-center"
               >
                 Explore Services
               </Link>
               
               <Link 
                 href="/contact" 
-                className="px-4 py-3 text-center bg-blue-600 dark:bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm"
+                className="px-6 py-4 min-h-[48px] text-center bg-blue-600 dark:bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm flex items-center justify-center"
               >
                 Let's Talk Business
               </Link>
@@ -153,6 +153,7 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
 
