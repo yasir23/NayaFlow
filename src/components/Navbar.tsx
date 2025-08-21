@@ -107,17 +107,17 @@ const Navbar = () => {
         <div className="lg:hidden bg-white dark:bg-slate-900 w-full fixed left-0 right-0 top-16 z-50 shadow-lg border-t border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             {/* Navigation Links */}
-            <div className="flex flex-col space-y-3 pb-4 border-b border-gray-200 dark:border-gray-700">
-              <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+            <div className="flex flex-col space-y-2 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 Home
               </Link>
-              <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 Services
               </Link>
-              <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 Case Studies
               </Link>
-              <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 About
               </Link>
             </div>
@@ -153,6 +153,7 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
 
 
 
