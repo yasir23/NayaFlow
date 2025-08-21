@@ -109,7 +109,7 @@ const TechnologyStack = () => {
       // Tools & Others
       { name: 'Git', icon: <FaGitAlt className="w-8 h-8" />, category: 'Tools', color: '#F05032' },
       { name: 'GitHub', icon: <SiGithub className="w-8 h-8" />, category: 'Tools', color: '#181717' },
-      { name: 'VS Code', icon: <SiVisualstudiocode className="w-8 h-8" />, category: 'Tools', color: '#007ACC' },
+      { name: 'VS Code', icon: <FaCode className="w-8 h-8" />, category: 'Tools', color: '#007ACC' },
       { name: 'Figma', icon: <SiFigma className="w-8 h-8" />, category: 'Tools', color: '#F24E1E' },
       { name: 'Jest', icon: <SiJest className="w-8 h-8" />, category: 'Tools', color: '#C21325' },
       { name: 'Cypress', icon: <SiCypress className="w-8 h-8" />, category: 'Tools', color: '#17202C' }
@@ -264,6 +264,7 @@ const TechnologyStack = () => {
 };
 
 export default TechnologyStack;
+
 
 
 
