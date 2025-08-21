@@ -79,7 +79,7 @@ export default function Documentation() {
                 alt="NAYAFlOW platform overview"
                 width={600}
                 height={400}
-                className="object-cover"
+                className="w-full max-w-full object-cover"
               />
             </div>
           </div>
