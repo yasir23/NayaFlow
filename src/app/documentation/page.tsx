@@ -250,7 +250,7 @@ export default function Documentation() {
                 alt="React pattern diagram"
                 width={600}
                 height={400}
-                className="object-cover"
+                className="w-full max-w-full object-cover"
               />
             </div>
           </div>
@@ -430,3 +430,4 @@ export default function Documentation() {
     </main>
   );
 } 
+
