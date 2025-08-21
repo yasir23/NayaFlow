@@ -53,8 +53,6 @@ import {
   SiLinux,
   SiUbuntu,
   SiCentos,
-  SiVisualstudiocode,
-  SiIntellijidea,
   SiPostman,
   SiFigma,
   SiSlack,
@@ -266,6 +264,7 @@ const TechnologyStack = () => {
 };
 
 export default TechnologyStack;
+
 
 
 
