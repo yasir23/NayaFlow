@@ -35,7 +35,6 @@ import {
   SiKubernetes,
   SiJenkins,
   SiGooglecloud,
-  SiMicrosoftazure,
   SiTerraform,
   SiGraphql,
   SiTailwindcss,
@@ -265,4 +264,5 @@ const TechnologyStack = () => {
 };
 
 export default TechnologyStack;
+
 
