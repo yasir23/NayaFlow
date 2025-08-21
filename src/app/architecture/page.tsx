@@ -130,7 +130,7 @@ export default function Architecture() {
                   alt="ReAct Pattern Diagram"
                   width={500}
                   height={300}
-                  className="mx-auto rounded-lg border border-gray-200"
+                  className="w-full max-w-full mx-auto rounded-lg border border-gray-200"
                 />
               </div>
               
@@ -481,3 +481,4 @@ export default function Architecture() {
     </main>
   );
 } 
+
