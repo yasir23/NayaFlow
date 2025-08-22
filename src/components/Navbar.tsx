@@ -86,15 +86,16 @@ const Navbar = () => {
           {/* Mobile Dark Mode Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            className="p-3 min-w-[44px] min-h-[44px] rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
             aria-label="Toggle dark mode"
           >
-            {theme === 'dark' ? <FaSun size={16} /> : <FaMoon size={16} />}
+            {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
           </button>
           
           <button 
-            className="p-2 text-gray-700 dark:text-gray-300 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            className="p-3 min-w-[44px] min-h-[44px] text-gray-700 dark:text-gray-300 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors flex items-center justify-center"
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
@@ -103,36 +104,36 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-slate-900 w-full absolute left-0 right-0 z-10 shadow-lg border-t border-gray-200 dark:border-gray-700">
+        <div className="lg:hidden bg-white dark:bg-slate-900 w-full fixed left-0 right-0 top-16 z-50 shadow-lg border-t border-gray-200 dark:border-gray-700">
           <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             {/* Navigation Links */}
-            <div className="flex flex-col space-y-3 pb-4 border-b border-gray-200 dark:border-gray-700">
-              <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+            <div className="flex flex-col space-y-2 pb-4 border-b border-gray-200 dark:border-gray-700">
+              <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 Home
               </Link>
-              <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/services" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 Services
               </Link>
-              <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/case-studies" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 Case Studies
               </Link>
-              <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors font-medium py-3 px-2 min-h-[44px] flex items-center rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800">
                 About
               </Link>
             </div>
             
             {/* Action Buttons */}
-            <div className="flex flex-col space-y-3 pt-2">
+            <div className="flex flex-col space-y-4 pt-4">
               <Link 
                 href="/services" 
-                className="px-4 py-3 text-center text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium transition-colors border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400"
+                className="px-6 py-4 min-h-[48px] text-center text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium transition-colors border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 flex items-center justify-center"
               >
                 Explore Services
               </Link>
               
               <Link 
                 href="/contact" 
-                className="px-4 py-3 text-center bg-blue-600 dark:bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm"
+                className="px-6 py-4 min-h-[48px] text-center bg-blue-600 dark:bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm flex items-center justify-center"
               >
                 Let's Talk Business
               </Link>
@@ -152,6 +153,10 @@ const Navbar = () => {
 };
 
 export default Navbar; 
+
+
+
+
 
 
 

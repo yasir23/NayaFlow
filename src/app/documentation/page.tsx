@@ -79,7 +79,7 @@ export default function Documentation() {
                 alt="NAYAFlOW platform overview"
                 width={600}
                 height={400}
-                className="object-cover"
+                className="w-full max-w-full object-cover"
               />
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function Documentation() {
                 alt="React pattern diagram"
                 width={600}
                 height={400}
-                className="object-cover"
+                className="w-full max-w-full object-cover"
               />
             </div>
           </div>
@@ -262,7 +262,7 @@ export default function Documentation() {
                 alt="LangGraph implementation"
                 width={600}
                 height={400}
-                className="object-cover"
+                className="w-full max-w-full object-cover"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -430,3 +430,5 @@ export default function Documentation() {
     </main>
   );
 } 
+
+

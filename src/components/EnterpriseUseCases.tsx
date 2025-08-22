@@ -25,7 +25,7 @@ const EnterpriseUseCases = () => {
             alt="Enterprise Use Cases for AI Agent Orchestration" 
             width={600}
             height={450}
-            className="mx-auto bg-white rounded-xl shadow-sm" 
+            className="w-full max-w-full mx-auto bg-white rounded-xl shadow-sm" 
           />
         </div>
       </div>

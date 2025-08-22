@@ -17,7 +17,10 @@ import {
   FaGitAlt,
   FaJs,
   FaHtml5,
-  FaCss3Alt
+  FaCss3Alt,
+  FaCloud,
+  FaCode,
+  FaPaintBrush
 } from 'react-icons/fa';
 import { 
   SiTypescript,
@@ -34,7 +37,6 @@ import {
   SiKubernetes,
   SiJenkins,
   SiGooglecloud,
-  SiMicrosoftazure,
   SiTerraform,
   SiGraphql,
   SiTailwindcss,
@@ -51,8 +53,6 @@ import {
   SiLinux,
   SiUbuntu,
   SiCentos,
-  SiVisualstudiocode,
-  SiIntellijidea,
   SiPostman,
   SiFigma,
   SiSlack,
@@ -101,7 +101,7 @@ const TechnologyStack = () => {
       { name: 'Kubernetes', icon: <SiKubernetes className="w-8 h-8" />, category: 'DevOps', color: '#326CE5' },
       { name: 'AWS', icon: <FaAws className="w-8 h-8" />, category: 'DevOps', color: '#FF9900' },
       { name: 'Google Cloud', icon: <SiGooglecloud className="w-8 h-8" />, category: 'DevOps', color: '#4285F4' },
-      { name: 'Azure', icon: <SiMicrosoftazure className="w-8 h-8" />, category: 'DevOps', color: '#0078D4' },
+      { name: 'Azure', icon: <FaCloud className="w-8 h-8" />, category: 'DevOps', color: '#0078D4' },
       { name: 'Jenkins', icon: <SiJenkins className="w-8 h-8" />, category: 'DevOps', color: '#D24939' },
       { name: 'Terraform', icon: <SiTerraform className="w-8 h-8" />, category: 'DevOps', color: '#623CE4' },
       { name: 'Nginx', icon: <SiNginx className="w-8 h-8" />, category: 'DevOps', color: '#009639' },
@@ -109,7 +109,7 @@ const TechnologyStack = () => {
       // Tools & Others
       { name: 'Git', icon: <FaGitAlt className="w-8 h-8" />, category: 'Tools', color: '#F05032' },
       { name: 'GitHub', icon: <SiGithub className="w-8 h-8" />, category: 'Tools', color: '#181717' },
-      { name: 'VS Code', icon: <SiVisualstudiocode className="w-8 h-8" />, category: 'Tools', color: '#007ACC' },
+      { name: 'VS Code', icon: <FaCode className="w-8 h-8" />, category: 'Tools', color: '#007ACC' },
       { name: 'Figma', icon: <SiFigma className="w-8 h-8" />, category: 'Tools', color: '#F24E1E' },
       { name: 'Jest', icon: <SiJest className="w-8 h-8" />, category: 'Tools', color: '#C21325' },
       { name: 'Cypress', icon: <SiCypress className="w-8 h-8" />, category: 'Tools', color: '#17202C' }
@@ -264,3 +264,9 @@ const TechnologyStack = () => {
 };
 
 export default TechnologyStack;
+
+
+
+
+
+

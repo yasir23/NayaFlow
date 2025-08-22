@@ -86,7 +86,7 @@ export default function Architecture() {
                 alt="NAYAFlOW platform architecture diagram"
                 width={600}
                 height={400}
-                className="object-cover"
+                className="w-full max-w-full object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/90 to-transparent p-4">
                 <p className="text-sm text-gray-600 font-medium">Figure 1: High-level architecture of the NAYAFlOW platform</p>
@@ -130,7 +130,7 @@ export default function Architecture() {
                   alt="ReAct Pattern Diagram"
                   width={500}
                   height={300}
-                  className="mx-auto rounded-lg border border-gray-200"
+                  className="w-full max-w-full mx-auto rounded-lg border border-gray-200"
                 />
               </div>
               
@@ -481,3 +481,4 @@ export default function Architecture() {
     </main>
   );
 } 
+
