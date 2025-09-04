@@ -47,17 +47,7 @@ const Navbar = () => {
           </Link>
         </div>
         
-        {/* Action Buttons - Desktop */}
-        <div className="hidden lg:flex items-center space-x-3">
-          {/* Dark Mode Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            aria-label="Toggle dark mode"
-          >
-            {theme === 'dark' ? <FaSun size={16} /> : <FaMoon size={16} />}
-          </button>
-          
+        
           {/* Professional Action Buttons */}
           <Link 
             href="/services" 
@@ -67,14 +57,14 @@ const Navbar = () => {
           </Link>
           
           <Link 
-            href="/contact" 
+            href="https://cal.com/yasirali23/intro-call-45-min" 
             className="px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors shadow-sm"
           >
             Let's Talk Business
           </Link>
           
           <Link 
-            href="/contact" 
+            href="https://cal.com/yasirali23/intro-call-45-min" 
             className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-600 dark:hover:to-purple-600 transition-all shadow-sm"
           >
             Contact Us
