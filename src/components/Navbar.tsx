@@ -48,13 +48,7 @@ const Navbar = () => {
         </div>
         
         
-          {/* Professional Action Buttons */}
-          <Link 
-            href="/services" 
-            className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium transition-colors border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400"
-          >
-            Explore Services
-          </Link>
+        <div className="flex items-center space-x-4">
           
           <Link 
             href="https://cal.com/yasirali23/intro-call-45-min" 
@@ -69,28 +63,10 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          </div>
         </div>
         
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center space-x-2">
-          {/* Mobile Dark Mode Toggle */}
-          <button
-            onClick={toggleTheme}
-            className="p-3 min-w-[44px] min-h-[44px] rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
-            aria-label="Toggle dark mode"
-          >
-            {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
-          
-          <button 
-            className="p-3 min-w-[44px] min-h-[44px] text-gray-700 dark:text-gray-300 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors flex items-center justify-center"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </button>
-        </div>
-      </div>
+        
       
       {/* Mobile Menu */}
       {isMenuOpen && (

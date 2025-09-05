@@ -339,16 +339,9 @@ export default function Home() {
       {/* FAQ Section */}
       <FAQ />
 
-      {/* Contact Form */}
-      <ContactForm />
 
       {/* CTA Section */}
       <CTA />
     </main>
   );
 }
-
-
-
-
-
