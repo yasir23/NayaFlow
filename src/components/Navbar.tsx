@@ -104,12 +104,7 @@ const Navbar = () => {
                 Let's Talk Business
               </Link>
               
-              <Link 
-                href="/contact" 
-                className="px-4 py-3 text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-600 dark:hover:to-purple-600 transition-all shadow-sm"
-              >
-                Contact Us
-              </Link>
+              
             </div>
           </div>
         </div>
