@@ -137,12 +137,12 @@ const Services = () => {
   const displayedServices = showAllServices ? services : services.slice(0, 8);
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white dark:bg-slate-900">
+    <section className="w-full py-16 md:py-24 bg-gray-950">
       <div className="container mx-auto px-4 md:px-6 w-full">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-100"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -151,7 +151,7 @@ const Services = () => {
             Transform Your Business
           </motion.h2>
           <motion.p 
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -166,7 +166,7 @@ const Services = () => {
           {displayedServices.map((service, index) => (
             <motion.div
               key={service.id}
-              className="group bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 cursor-pointer"
+              className="group bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-700 hover:border-gray-500 transition-all duration-300 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -182,33 +182,33 @@ const Services = () => {
                 </div>
                 
                 {/* Service Title */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-gray-100 mb-3 group-hover:text-white transition-colors">
                   {service.title}
                 </h3>
                 
                 {/* Service Description */}
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+                <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
                 
                 {/* Service Features */}
                 <div className="space-y-1">
                   {service.features.slice(0, 2).map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-xs text-gray-500 dark:text-gray-400">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                    <div key={featureIndex} className="flex items-center text-xs text-gray-500">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></div>
                       <span>{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 2 && (
-                    <div className="flex items-center text-xs text-gray-500 dark:text-gray-400">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                    <div className="flex items-center text-xs text-gray-500">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></div>
                       <span>+{service.features.length - 2} more features</span>
                     </div>
                   )}
                 </div>
                 
                 {/* Hover Arrow */}
-                <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-4 flex items-center text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-sm font-medium">Learn more</span>
                   <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -223,7 +223,7 @@ const Services = () => {
         <div className="text-center">
           <motion.button
             onClick={() => setShowAllServices(!showAllServices)}
-            className="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-gray-800 text-gray-300 hover:bg-gray-700 rounded-lg font-medium transition-colors border border-gray-700"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

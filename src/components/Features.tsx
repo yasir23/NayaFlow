@@ -53,11 +53,11 @@ const Features = () => {
   ];
 
   return (
-    <section className="w-full py-20 bg-blue-50">
+    <section className="w-full py-20 bg-gray-900/30">
       <div className="container mx-auto px-4 md:px-6 w-full">
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-4 text-blue-700"
+            className="text-3xl md:text-4xl font-bold mb-4 text-gray-100"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -66,7 +66,7 @@ const Features = () => {
             AI Automation for Every Business Size
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-gray-400 max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -80,15 +80,15 @@ const Features = () => {
           {features.map((feature, index) => (
             <motion.div 
               key={index}
-              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-700"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-3 text-blue-700">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-gray-100">{feature.title}</h3>
+              <p className="text-gray-400">{feature.description}</p>
             </motion.div>
           ))}
         </div>

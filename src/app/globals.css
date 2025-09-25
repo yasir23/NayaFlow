@@ -1,41 +1,42 @@
 @import "tailwindcss";
 
+/* DevMingle-inspired dark theme */
 :root {
-  /* Light mode colors */
-  --background: #ffffff;
-  --foreground: #171717;
-  --card: #ffffff;
-  --card-foreground: #171717;
-  --primary: #1d4ed8;
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #1d4ed8;
+  /* DevMingle Dark Theme Colors */
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #111827;
+  --card-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1f2937;
+  --secondary-foreground: #ffffff;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  --accent: #374151;
+  --accent-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #ffffff;
 }
 
 .dark {
-  /* Dark mode colors */
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
-  --secondary: #1e293b;
-  --secondary-foreground: #f8fafc;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #1e293b;
-  --accent-foreground: #f8fafc;
-  --border: #334155;
-  --input: #334155;
-  --ring: #3b82f6;
+  /* Same as root for consistent dark theme */
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #111827;
+  --card-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1f2937;
+  --secondary-foreground: #ffffff;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  --accent: #374151;
+  --accent-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #ffffff;
 }
 
 @theme inline {
@@ -91,6 +92,68 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+/* DevMingle-inspired styles */
+.grainy {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700' opacity='0.91'%3e%3cdefs%3e%3cfilter id='nnnoise-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'%3e%3cfeTurbulence type='turbulence' baseFrequency='0.056' numOctaves='4' seed='15' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3e%3c/feTurbulence%3e%3cfeSpecularLighting surfaceScale='6' specularConstant='0.1' specularExponent='20' lighting-color='white' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' result='specularLighting'%3e%3cfeDistantLight azimuth='3' elevation='64'%3e%3c/feDistantLight%3e%3c/feSpecularLighting%3e%3c/filter%3e%3c/defs%3e%3crect width='700' height='700' fill='transparent'%3e%3c/rect%3e%3crect width='700' height='700' fill='white' filter='url(%23nnnoise-filter)'%3e%3c/rect%3e%3c/svg%3e");
+  background-size: 300px 300px;
+  mix-blend-mode: color-dodge;
+  opacity: 0.28;
+  isolation: auto;
+}
+
+.hero-grain {
+  background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.hero-word-stroke {
+  -webkit-text-stroke: clamp(2px, 1vw, 10px) rgba(255,255,255,0.14);
+  text-shadow: 0 18px 30px rgba(0,0,0,0.35), 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.custom-cursor,
+.custom-cursor-dot {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .custom-cursor,
+  .custom-cursor-dot {
+    display: block;
+  }
+}
+
+/* Animation classes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+.bg-200\% {
+  background-size: 200% 100%;
 }
 
 

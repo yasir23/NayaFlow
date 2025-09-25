@@ -90,12 +90,12 @@ const UseCases = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-900/30">
       <div className="container px-4 md:px-6 mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-16">
           <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-blue-700"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-100"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -104,7 +104,7 @@ const UseCases = () => {
             Industry Use Cases
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 max-w-4xl mx-auto mb-8"
+            className="text-xl text-gray-400 max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -120,13 +120,13 @@ const UseCases = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium">
               🔗 LangGraph Orchestration
             </div>
-            <div className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium">
               🤖 Google AI SDKs
             </div>
-            <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm font-medium">
               ⚡ Multi-Agent Systems
             </div>
           </motion.div>
@@ -137,7 +137,7 @@ const UseCases = () => {
           {useCases.map((useCase, index) => (
             <motion.div
               key={useCase.id}
-              className={`${useCase.bgColor} p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${useCase.borderColor} group cursor-pointer`}
+              className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 group cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -146,40 +146,40 @@ const UseCases = () => {
             >
               {/* Icon and Industry */}
               <div className="flex items-center mb-6">
-                <div className={`bg-gradient-to-r ${useCase.color} p-3 rounded-lg text-white mr-4`}>
+                <div className="bg-gray-700 p-3 rounded-lg text-white mr-4">
                   {useCase.icon}
                 </div>
-                <h3 className={`text-lg font-bold ${useCase.textColor}`}>
+                <h3 className="text-lg font-bold text-gray-100">
                   {useCase.industry}
                 </h3>
               </div>
 
               {/* Problem */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-800 mb-2">Business Problem</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h4 className="text-sm font-semibold text-gray-200 mb-2">Business Problem</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">
                   {useCase.problem}
                 </p>
               </div>
 
               {/* Solution */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-gray-800 mb-2">AI Solution</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h4 className="text-sm font-semibold text-gray-200 mb-2">AI Solution</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">
                   {useCase.solution}
                 </p>
               </div>
 
               {/* Outcome */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-800 mb-2">Measurable Outcomes</h4>
-                <p className={`text-sm font-medium ${useCase.textColor} leading-relaxed`}>
+                <h4 className="text-sm font-semibold text-gray-200 mb-2">Measurable Outcomes</h4>
+                <p className="text-sm font-medium text-gray-300 leading-relaxed">
                   {useCase.outcome}
                 </p>
               </div>
 
               {/* Hover Arrow */}
-              <div className={`flex items-center ${useCase.textColor} opacity-0 group-hover:opacity-100 transition-opacity`}>
+              <div className="flex items-center text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
                 <span className="text-sm font-medium">Learn more</span>
                 <FaArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
               </div>
