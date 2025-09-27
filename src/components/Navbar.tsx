@@ -16,7 +16,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       setScrolled(currentScrollY > 50);
       setNavHidden(currentScrollY > lastScrollY && currentScrollY > 100);
       setLastScrollY(currentScrollY);
@@ -46,10 +46,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        navHidden ? '-translate-y-full' : 'translate-y-0'
-      } ${scrolled ? 'bg-gray-950/60 backdrop-blur-xl' : ''}`}
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${navHidden ? '-translate-y-full' : 'translate-y-0'
+        } ${scrolled ? 'bg-gray-950/60 backdrop-blur-xl' : ''}`}
     >
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex justify-between items-center h-20">
@@ -57,47 +56,40 @@ const Navbar = () => {
           <div ref={el => navItemsRef.current[0] = el} className="relative">
             <Link href="/" className="text-xl tracking-tighter flex items-center gap-2">
               <span className="text-gray-500 font-light">naya</span>
-              <svg 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                className="text-white"
-              >
-                {/* Robot Head - Square with rounded corners */}
-                <rect x="7" y="3" width="10" height="8" rx="1.5" fill="currentColor" opacity="0.9"/>
-                
-                {/* Antenna */}
-                <line x1="12" y1="3" x2="12" y2="1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <circle cx="12" cy="0.5" r="0.8" fill="currentColor"/>
-                
-                {/* Robot Eyes - Rectangular */}
-                <rect x="8.5" y="5" width="1.5" height="1" rx="0.2" fill="#00FFFF" opacity="0.9"/>
-                <rect x="14" y="5" width="1.5" height="1" rx="0.2" fill="#00FFFF" opacity="0.9"/>
-                
-                {/* Robot Mouth - Grid pattern */}
-                <rect x="9" y="7.5" width="6" height="1" rx="0.2" fill="currentColor" opacity="0.3"/>
-                <line x1="10" y1="7.5" x2="10" y2="8.5" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
-                <line x1="12" y1="7.5" x2="12" y2="8.5" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
-                <line x1="14" y1="7.5" x2="14" y2="8.5" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
-                
-                {/* Robot Body - Rectangular */}
-                <rect x="6" y="12" width="12" height="8" rx="1" fill="currentColor" opacity="0.8"/>
-                
-                {/* Chest Panel */}
-                <rect x="8" y="14" width="8" height="4" rx="0.5" fill="currentColor" opacity="0.2"/>
-                <rect x="9" y="15" width="2" height="1" rx="0.2" fill="#00FFFF" opacity="0.6"/>
-                <rect x="13" y="15" width="2" height="1" rx="0.2" fill="#00FFFF" opacity="0.6"/>
-                <rect x="9" y="17" width="2" height="1" rx="0.2" fill="#00FFFF" opacity="0.6"/>
-                <rect x="13" y="17" width="2" height="1" rx="0.2" fill="#00FFFF" opacity="0.6"/>
-                
-                {/* Robot Arms */}
-                <rect x="4" y="13" width="2" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-                <rect x="18" y="13" width="2" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-                
-                {/* Robot Legs */}
-                <rect x="8" y="21" width="3" height="2" rx="0.5" fill="currentColor" opacity="0.6"/>
-                <rect x="13" y="21" width="3" height="2" rx="0.5" fill="currentColor" opacity="0.6"/>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="12" y1="2" x2="12" y2="0.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <circle cx="12" cy="0.5" r="0.75" fill="currentColor" />
+                <rect x="8" y="2" width="8" height="7" rx="2" fill="currentColor" opacity="0.95" />
+
+                <circle cx="10.5" cy="5" r="1" fill="#0EA5E9" opacity="0.9" />
+                <circle cx="13.5" cy="5" r="1" fill="#0EA5E9" opacity="0.9" />
+                <circle cx="10.5" cy="5" r="0.4" fill="white" opacity="0.8" />
+                <circle cx="13.5" cy="5" r="0.4" fill="white" opacity="0.8" />
+
+                <rect x="10.5" y="7" width="3" height="0.8" rx="0.4" fill="currentColor" opacity="0.4" />
+
+                <rect x="6.5" y="10" width="11" height="9" rx="2" fill="currentColor" opacity="0.9" />
+
+                <rect x="8.5" y="12" width="7" height="5" rx="1" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="0.5" opacity="0.3" />
+
+                <circle cx="10" cy="14" r="0.6" fill="#22C55E" opacity="0.8" />
+                <circle cx="12" cy="14" r="0.6" fill="#EAB308" opacity="0.8" />
+                <circle cx="14" cy="14" r="0.6" fill="#EF4444" opacity="0.8" />
+
+                <line x1="9.5" y1="15.5" x2="14.5" y2="15.5" stroke="#0EA5E9" stroke-width="0.8" opacity="0.6" />
+                <line x1="9.5" y1="16.5" x2="12.5" y2="16.5" stroke="#0EA5E9" stroke-width="0.8" opacity="0.4" />
+
+                <rect x="4" y="11.5" width="2" height="6" rx="1" fill="currentColor" opacity="0.8" />
+                <rect x="18" y="11.5" width="2" height="6" rx="1" fill="currentColor" opacity="0.8" />
+
+                <circle cx="5" cy="18.5" r="1" fill="currentColor" opacity="0.7" />
+                <circle cx="19" cy="18.5" r="1" fill="currentColor" opacity="0.7" />
+
+                <rect x="9" y="20" width="2.5" height="3" rx="0.8" fill="currentColor" opacity="0.8" />
+                <rect x="12.5" y="20" width="2.5" height="3" rx="0.8" fill="currentColor" opacity="0.8" />
+
+                <rect x="8.5" y="23" width="3" height="1" rx="0.5" fill="currentColor" opacity="0.6" />
+                <rect x="12.5" y="23" width="3" height="1" rx="0.5" fill="currentColor" opacity="0.6" />
               </svg>
               <span className="text-white font-medium">flow</span>
             </Link>
@@ -108,7 +100,7 @@ const Navbar = () => {
               transition={{ duration: 1, delay: 1 }}
             />
           </div>
-          
+
           {/* Center navigation */}
           <div className="hidden md:flex items-center space-x-12">
             {['Services', 'Solutions', 'Case Studies', 'About'].map((item, i) => (
@@ -125,10 +117,10 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          
+
           {/* CTA with glow effect */}
           <div ref={el => navItemsRef.current[5] = el} className="relative">
-            <Link 
+            <Link
               href="https://cal.com/yasirali23/intro-call-45-min"
               className="relative px-6 py-2 text-sm text-white overflow-hidden group"
             >
@@ -146,7 +138,7 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
 
 
 
