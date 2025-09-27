@@ -6,10 +6,10 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const Hero = () => {
-  const heroRef = useRef(null);
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const ctaRef = useRef(null);
+  const heroRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLElement>(null);
+  const subtitleRef = useRef<HTMLElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
